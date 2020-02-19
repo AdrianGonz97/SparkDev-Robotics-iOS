@@ -25,6 +25,10 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var webVideoView: WKWebView!
     @IBOutlet weak var controllerDirection: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var carbonLabel: UILabel!
+    
     
     //Data
     var peripheralManager: CBPeripheralManager?
@@ -49,7 +53,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         //Create and start the peripheral manager
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         //-Notification for updating the text view with incoming text
-   //     updateIncomingData()
+        updateIncomingData()
         
         let myURL = URL(string: "http://10.0.0.56:81/stream");
         let myRequest = URLRequest(url: myURL!);
@@ -88,6 +92,21 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
             
         }
     }*/
+    
+    func updateIncomingData () {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
+            notification in
+            
+            let currentString = characteristicASCIIValue;
+            
+            let valueList = currentString.components(separatedBy: ",")
+            
+            self.humidityLabel.text = valueList[0] + "%"
+            self.temperatureLabel.text = valueList[1] + "°C"
+            self.carbonLabel.text = valueList[2] + "%"
+            
+        }
+    }
     
  /*   @IBAction func clickSendAction(_ sender: AnyObject) {
         outgoingData()
