@@ -71,7 +71,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     }
     
 
-/*    func updateIncomingData () {
+    /*func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
             let appendString = "\n"

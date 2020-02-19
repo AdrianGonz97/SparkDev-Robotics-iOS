@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
-		D5B24DD81DEE393B00D33B5A /* Basic Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B24DD81DEE393B00D33B5A /* Vladimir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vladimir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B24DE01DEE393B00D33B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5B24DE21DEE393B00D33B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		D5B24DD91DEE393B00D33B5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B24DD81DEE393B00D33B5A /* Basic Chat.app */,
+				D5B24DD81DEE393B00D33B5A /* Vladimir.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			);
 			name = "Basic Chat";
 			productName = "Basic Chat";
-			productReference = D5B24DD81DEE393B00D33B5A /* Basic Chat.app */;
+			productReference = D5B24DD81DEE393B00D33B5A /* Vladimir.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 				TargetAttributes = {
 					D5B24DD71DEE393B00D33B5A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = QPC6Z2NQXM;
+						DevelopmentTeam = MDM6Z2LGN5;
 						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
@@ -298,12 +298,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QPC6Z2NQXM;
+				DEVELOPMENT_TEAM = MDM6Z2LGN5;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project12";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project1";
+				PRODUCT_NAME = Vladimir;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -313,12 +313,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QPC6Z2NQXM;
+				DEVELOPMENT_TEAM = MDM6Z2LGN5;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project12";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project1";
+				PRODUCT_NAME = Vladimir;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
