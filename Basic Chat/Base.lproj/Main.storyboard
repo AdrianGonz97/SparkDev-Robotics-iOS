@@ -126,7 +126,7 @@
                                         </wkWebViewConfiguration>
                                     </wkWebView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-6N-bgR" userLabel="Arm Controller Stack View">
-                                        <rect key="frame" x="556" y="143.66666666666663" width="155" height="210.33333333333337"/>
+                                        <rect key="frame" x="531" y="143.66666666666663" width="155" height="210.33333333333337"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qUr-r2-Fb2" userLabel="Claw Buttons Stack View">
                                                 <rect key="frame" x="24" y="0.0" width="107" height="30"/>
@@ -212,7 +212,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZdM-sm-Ax5" userLabel="Motor Controller Stack View">
-                                        <rect key="frame" x="25" y="183.66666666666663" width="155" height="170.33333333333337"/>
+                                        <rect key="frame" x="50" y="183.66666666666663" width="155" height="170.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3g-Ys-ZEo" userLabel="Forward Button">
                                                 <rect key="frame" x="52.666666666666671" y="0.0" width="50" height="50"/>
@@ -339,10 +339,13 @@
                                 <color key="backgroundColor" red="0.16927744289999999" green="0.16927744289999999" blue="0.16927744289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="ZdM-sm-Ax5" firstAttribute="leading" secondItem="oqA-bO-3LA" secondAttribute="leading" constant="25" id="I8o-2r-8Wg">
+                                    <constraint firstItem="ZdM-sm-Ax5" firstAttribute="leading" secondItem="oqA-bO-3LA" secondAttribute="leading" constant="50" id="I8o-2r-8Wg">
                                         <variation key="widthClass=compact" constant="25"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="60"/>
                                     </constraint>
-                                    <constraint firstItem="3IS-8G-nbe" firstAttribute="top" secondItem="oqA-bO-3LA" secondAttribute="top" constant="60" id="J2G-eM-DuZ"/>
+                                    <constraint firstItem="3IS-8G-nbe" firstAttribute="top" secondItem="oqA-bO-3LA" secondAttribute="top" constant="60" id="J2G-eM-DuZ">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                    </constraint>
                                     <constraint firstItem="QiO-vB-8Sf" firstAttribute="top" secondItem="3IS-8G-nbe" secondAttribute="bottom" constant="20" id="WFb-ZD-FuR">
                                         <variation key="heightClass=regular" constant="35"/>
                                     </constraint>
@@ -350,8 +353,9 @@
                                     <constraint firstAttribute="bottom" secondItem="Arb-6N-bgR" secondAttribute="bottom" constant="60" id="hpW-Cn-Fvl"/>
                                     <constraint firstItem="QiO-vB-8Sf" firstAttribute="centerX" secondItem="oqA-bO-3LA" secondAttribute="centerX" id="nyd-Ud-Yc0"/>
                                     <constraint firstItem="3IS-8G-nbe" firstAttribute="centerX" secondItem="oqA-bO-3LA" secondAttribute="centerX" id="rng-WC-XfF"/>
-                                    <constraint firstAttribute="trailing" secondItem="Arb-6N-bgR" secondAttribute="trailing" constant="25" id="ryR-uI-5C9">
+                                    <constraint firstAttribute="trailing" secondItem="Arb-6N-bgR" secondAttribute="trailing" constant="50" id="ryR-uI-5C9">
                                         <variation key="widthClass=compact" constant="25"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="55"/>
                                     </constraint>
                                 </constraints>
                             </view>
