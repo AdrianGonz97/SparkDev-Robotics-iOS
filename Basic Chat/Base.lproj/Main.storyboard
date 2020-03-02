@@ -150,7 +150,8 @@
                                                             <constraint firstAttribute="height" constant="50" id="GAl-9C-sNe"/>
                                                             <constraint firstAttribute="width" constant="50" id="xE5-pN-FSQ"/>
                                                         </constraints>
-                                                        <state key="normal" image="arrow.up" catalog="system"/>
+                                                        <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                        <state key="normal" image="Up Arrow"/>
                                                         <connections>
                                                             <action selector="sendArmForwardDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="hFe-KS-3Bd"/>
                                                             <action selector="sendArmForwardUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="dyO-QJ-KVw"/>
@@ -166,7 +167,8 @@
                                                                     <constraint firstAttribute="width" constant="50" id="Ffx-lI-St8"/>
                                                                     <constraint firstAttribute="height" constant="50" id="mRM-5h-fqY"/>
                                                                 </constraints>
-                                                                <state key="normal" image="arrow.left" catalog="system"/>
+                                                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                                <state key="normal" image="Left Arrow"/>
                                                                 <connections>
                                                                     <action selector="sendArmLeftDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="0BS-P5-BmH"/>
                                                                     <action selector="sendArmLeftUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="AfG-2f-R9J"/>
@@ -179,7 +181,8 @@
                                                                     <constraint firstAttribute="width" constant="50" id="B21-2q-bz7"/>
                                                                     <constraint firstAttribute="height" constant="50" id="HMR-NH-rPc"/>
                                                                 </constraints>
-                                                                <state key="normal" image="arrow.right" catalog="system"/>
+                                                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                                <state key="normal" image="Right Arrow"/>
                                                                 <connections>
                                                                     <action selector="sendArmRightDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="MjS-J7-o15"/>
                                                                     <action selector="sendArmRightUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="jco-Od-2F1"/>
@@ -194,7 +197,8 @@
                                                             <constraint firstAttribute="height" constant="50" id="7pk-hK-jiv"/>
                                                             <constraint firstAttribute="width" constant="50" id="Knh-0f-vTY"/>
                                                         </constraints>
-                                                        <state key="normal" image="arrow.down" catalog="system"/>
+                                                        <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                        <state key="normal" image="Down Arrow"/>
                                                         <connections>
                                                             <action selector="sendArmBackDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="ypg-pi-xPM"/>
                                                             <action selector="sendArmBackUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="mV8-FP-JHB"/>
@@ -220,7 +224,8 @@
                                                     <constraint firstAttribute="height" constant="50" id="ArQ-fV-cQz"/>
                                                     <constraint firstAttribute="width" constant="50" id="qfd-GS-cJm"/>
                                                 </constraints>
-                                                <state key="normal" image="arrow.up" catalog="system"/>
+                                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                <state key="normal" image="Up Arrow"/>
                                                 <connections>
                                                     <action selector="sendForwardDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="6pO-yC-a1t"/>
                                                     <action selector="sendForwardUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="Gpp-jv-PNl"/>
@@ -236,7 +241,8 @@
                                                             <constraint firstAttribute="width" constant="50" id="QqQ-Vm-rlB"/>
                                                             <constraint firstAttribute="height" constant="50" id="bBy-sa-akT"/>
                                                         </constraints>
-                                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                                        <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                        <state key="normal" image="Left Arrow"/>
                                                         <connections>
                                                             <action selector="sendLeftDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="c8a-OQ-qaL"/>
                                                             <action selector="sendLeftUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="Gxo-fx-Jvx"/>
@@ -249,7 +255,8 @@
                                                             <constraint firstAttribute="width" constant="50" id="qaQ-kD-Ku8"/>
                                                             <constraint firstAttribute="height" constant="50" id="vhG-8d-QvX"/>
                                                         </constraints>
-                                                        <state key="normal" image="arrow.right" catalog="system"/>
+                                                        <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                        <state key="normal" image="Right Arrow"/>
                                                         <connections>
                                                             <action selector="sendRightDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="z3h-gG-KoG"/>
                                                             <action selector="sendRightUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="8BC-9D-h9J"/>
@@ -264,7 +271,8 @@
                                                     <constraint firstAttribute="width" constant="50" id="oqU-Qj-bJV"/>
                                                     <constraint firstAttribute="height" constant="50" id="zGq-iU-5ir"/>
                                                 </constraints>
-                                                <state key="normal" image="arrow.down" catalog="system"/>
+                                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                <state key="normal" image="Down Arrow"/>
                                                 <connections>
                                                     <action selector="sendBackDown:" destination="aQA-m6-Bjv" eventType="touchDown" id="LPt-ET-Qf9"/>
                                                     <action selector="sendBackUp:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="jTN-K5-mdi"/>
@@ -387,9 +395,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.down" catalog="system" width="60" height="64"/>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
-        <image name="arrow.right" catalog="system" width="64" height="48"/>
-        <image name="arrow.up" catalog="system" width="60" height="64"/>
+        <image name="Down Arrow" width="567" height="567"/>
+        <image name="Left Arrow" width="567" height="567"/>
+        <image name="Right Arrow" width="567" height="567"/>
+        <image name="Up Arrow" width="567" height="567"/>
     </resources>
 </document>
