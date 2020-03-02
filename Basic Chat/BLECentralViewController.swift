@@ -61,7 +61,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         refreshScanView()
         print("View Cleared")
     }
-    
+     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("Stop Scanning")

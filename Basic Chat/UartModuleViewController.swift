@@ -16,18 +16,18 @@ import CoreBluetooth
 
 class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, UITextViewDelegate, UITextFieldDelegate, WKUIDelegate {
     
-    //UI
- //   @IBOutlet weak var baseTextView: UITextView!
+    // UI
+    // @IBOutlet weak var baseTextView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var switchUI: UISwitch!
-    @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var webVideoView: WKWebView!
-    @IBOutlet weak var controllerDirection: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var carbonLabel: UILabel!
+    @IBOutlet weak var motorLabel: UILabel!
+    @IBOutlet weak var armLabel: UILabel!
     
     
     //Data
@@ -108,64 +108,133 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         }
     }
     
- /*   @IBAction func clickSendAction(_ sender: AnyObject) {
-        outgoingData()
-        
-    }
-   */
+    // Motor Controller Functions
     @IBAction func sendForwardDown(_ sender: Any) {
-        print("Forward")
+        print("Motor Forward")
         sendData(inputText: "a")
-        controllerDirection.text = "Frwd"
+        motorLabel.text = "Motor: Forward"
     }
     
     @IBAction func sendRightDown(_ sender: Any) {
-        print("Right")
+        print("Motor Right")
         sendData(inputText: "b")
-        controllerDirection.text = "Right"
+        motorLabel.text = "Motor: Right"
     }
     
     @IBAction func sendBackDown(_ sender: Any) {
-        print("Back")
+        print("Motor Back")
         sendData(inputText: "c")
-        controllerDirection.text = "Back"
+        motorLabel.text = "Motor: Back"
     }
     
     @IBAction func sendLeftDown(_ sender: Any) {
-        print("Left")
+        print("Motor Left")
         sendData(inputText: "d")
-        controllerDirection.text = "Left"
+        motorLabel.text = "Motor: Left"
     }
     
-    func sendCancel() {
-        print("Stop")
+    func sendMotorCancel() {
+        print("Motor Stop")
         sendData(inputText: "e")
-        controllerDirection.text = "Stop"
+        motorLabel.text = "Motor: Stop"
     }
     
     @IBAction func sendForwardUp(_ sender: Any) {
-        sendCancel();
+        sendMotorCancel()
     }
     
+    @IBAction func sendForwardUpOutside(_ sender: Any) {
+        sendMotorCancel()
+    }
     
     @IBAction func sendRightUp(_ sender: Any) {
-        sendCancel();
+        sendMotorCancel()
     }
     
+    @IBAction func sendRightUpOutside(_ sender: Any) {
+        sendMotorCancel()
+    }
     
     @IBAction func sendBackUp(_ sender: Any) {
-        sendCancel();
+        sendMotorCancel()
     }
     
+    @IBAction func sendBackUpOutside(_ sender: Any) {
+        sendMotorCancel()
+    }
     
     @IBAction func sendLeftUp(_ sender: Any) {
-        sendCancel();
+        sendMotorCancel()
     }
     
+    @IBAction func sendLeftUpOutside(_ sender: Any) {
+        sendMotorCancel()
+    }
     
+    // Arm Controller Functions
+    func sendArmCancel() {
+        print("Arm Stop")
+        sendData(inputText: "j")
+        armLabel.text = "Arm: Stop"
+    }
     
+    @IBAction func sendArmForwardDown(_ sender: Any) {
+        print("Arm Forward")
+        sendData(inputText: "f")
+        armLabel.text = "Arm: Forward"
+    }
     
-/*    func outgoingData () {
+    @IBAction func sendArmForwardUp(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    @IBAction func sendArmForwardUpOutside(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    @IBAction func sendArmBackDown(_ sender: Any) {
+        print("Arm Back")
+        sendData(inputText: "g")
+        armLabel.text = "Arm: Back"
+    }
+    
+    @IBAction func sendArmBackUp(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    @IBAction func sendArmBackUpOutside(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    @IBAction func sendArmLeftDown(_ sender: Any) {
+        print("Arm Left")
+        sendData(inputText: "h")
+        armLabel.text = "Arm: Left"
+    }
+    
+    @IBAction func sendArmLeftUp(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    @IBAction func sendArmLeftUpOutside(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    @IBAction func sendArmRightDown(_ sender: Any) {
+        print("Arm Right")
+        sendData(inputText: "i")
+        armLabel.text = "Arm: Right"
+    }
+    
+    @IBAction func sendArmRightUp(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    @IBAction func sendArmRightUpOutside(_ sender: Any) {
+        sendArmCancel()
+    }
+    
+    /*    func outgoingData () {
         let appendString = "\n"
         
         let inputText = inputTextField.text
