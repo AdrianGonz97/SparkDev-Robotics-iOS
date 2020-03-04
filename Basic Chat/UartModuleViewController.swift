@@ -53,7 +53,9 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         //Create and start the peripheral manager
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         //-Notification for updating the text view with incoming text
-        updateIncomingData()
+        
+        // UNCOMMENT WHEN READY
+        //updateIncomingData()
         
         let myURL = URL(string: "http://192.168.43.226:80/stream");
         let myRequest = URLRequest(url: myURL!);
@@ -93,6 +95,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         }
     }*/
     
+    /* UNCOMMENT WHEN READY
     func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
@@ -108,6 +111,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         }
     }
     
+    */
     // Motor Controller Functions
     @IBAction func sendForwardDown(_ sender: Any) {
         print("Motor Forward")
@@ -232,6 +236,18 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     
     @IBAction func sendArmRightUpOutside(_ sender: Any) {
         sendArmCancel()
+    }
+    
+    // Claw functions
+    
+    @IBAction func openClaw(_ sender: Any) {
+        print("Opening Claw..")
+        sendData(inputText: "PLACEHOLDER")
+    }
+    
+    @IBAction func closeClaw(_ sender: Any) {
+        print("Closing Claw..")
+        sendData(inputText: "PLACEHOLDER")
     }
     
     /*    func outgoingData () {

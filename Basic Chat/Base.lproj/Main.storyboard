@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aQA-m6-Bjv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Yh-2X-Wy2">
     <device id="retina5_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -114,7 +114,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
                                     <wkWebView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3IS-8G-nbe">
-                                        <rect key="frame" x="208" y="60" width="320" height="240"/>
+                                        <rect key="frame" x="208" y="30" width="320" height="240"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="DKF-oQ-ZGb"/>
@@ -134,12 +134,18 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iM-w3-HoD" userLabel="Open Claw">
                                                         <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="66.666666666666671"/>
                                                         <state key="normal" image="Claw-Open"/>
+                                                        <connections>
+                                                            <action selector="openClaw:" destination="aQA-m6-Bjv" eventType="touchDown" id="0Oo-2u-aN8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqW-v1-WRK" userLabel="Close Claw">
                                                         <rect key="frame" x="86.666666666666629" y="0.0" width="66.666666666666686" height="66.666666666666671"/>
                                                         <state key="normal" image="Claw-Closed">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="closeClaw:" destination="aQA-m6-Bjv" eventType="touchUpInside" id="Way-KO-lZ5"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -290,7 +296,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QiO-vB-8Sf" userLabel="Sensor Data Stack View">
-                                        <rect key="frame" x="308.66666666666669" y="320" width="119" height="71"/>
+                                        <rect key="frame" x="308.66666666666669" y="290" width="119" height="71"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="CUV-vP-w7w" userLabel="Humidity Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="20.333333333333332"/>
@@ -353,7 +359,7 @@
                                         <variation key="widthClass=compact" constant="25"/>
                                         <variation key="heightClass=compact-widthClass=compact" constant="60"/>
                                     </constraint>
-                                    <constraint firstItem="3IS-8G-nbe" firstAttribute="top" secondItem="oqA-bO-3LA" secondAttribute="top" constant="60" id="J2G-eM-DuZ">
+                                    <constraint firstItem="3IS-8G-nbe" firstAttribute="top" secondItem="oqA-bO-3LA" secondAttribute="top" constant="30" id="J2G-eM-DuZ">
                                         <variation key="heightClass=compact-widthClass=compact" constant="20"/>
                                     </constraint>
                                     <constraint firstItem="QiO-vB-8Sf" firstAttribute="top" secondItem="3IS-8G-nbe" secondAttribute="bottom" constant="20" id="WFb-ZD-FuR">
