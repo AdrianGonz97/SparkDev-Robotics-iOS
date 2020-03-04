@@ -55,7 +55,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         //-Notification for updating the text view with incoming text
         updateIncomingData()
         
-        let myURL = URL(string: "http://10.0.0.56:81/stream");
+        let myURL = URL(string: "http://192.168.43.226:80/stream");
         let myRequest = URLRequest(url: myURL!);
         webVideoView.load(myRequest);
     }
