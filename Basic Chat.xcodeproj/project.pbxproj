@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A59557B24107D16002AF177 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 3A59557A24107D16002AF177 /* SideMenu */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
 		D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A59557B24107D16002AF177 /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = "Basic Chat";
+			packageProductDependencies = (
+				3A59557A24107D16002AF177 /* SideMenu */,
+			);
 			productName = "Basic Chat";
 			productReference = D5B24DD81DEE393B00D33B5A /* Vladimir.app */;
 			productType = "com.apple.product-type.application";
@@ -105,7 +110,6 @@
 				TargetAttributes = {
 					D5B24DD71DEE393B00D33B5A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = LGQ3ADF7P9;
 						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
@@ -120,6 +124,9 @@
 				Base,
 			);
 			mainGroup = D5B24DCF1DEE393B00D33B5A;
+			packageReferences = (
+				3A59557924107D16002AF177 /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = D5B24DD91DEE393B00D33B5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,7 +294,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -298,11 +306,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LGQ3ADF7P9;
+				DEVELOPMENT_TEAM = QPC6Z2NQXM;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project1000";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project108";
 				PRODUCT_NAME = Vladimir;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -313,11 +324,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LGQ3ADF7P9;
+				DEVELOPMENT_TEAM = QPC6Z2NQXM;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project1000";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Spark-dev-robotics-project108";
 				PRODUCT_NAME = Vladimir;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -346,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A59557924107D16002AF177 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.4.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A59557A24107D16002AF177 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A59557924107D16002AF177 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D5B24DD01DEE393B00D33B5A /* Project object */;
 }

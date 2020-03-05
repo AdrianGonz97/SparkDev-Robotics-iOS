@@ -98,6 +98,63 @@
             </objects>
             <point key="canvasLocation" x="229.59999999999999" y="-3.1484257871064472"/>
         </scene>
+        <!--Sensor Graphs-->
+        <scene sceneID="6Tt-GS-J2k">
+            <objects>
+                <tableViewController id="0av-S0-7fC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AEg-bm-yP8">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CDt-xe-H3Z">
+                                <rect key="frame" x="0.0" y="28" width="736" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDt-xe-H3Z" id="paw-JZ-jQs">
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0av-S0-7fC" id="Sgm-q3-xxL"/>
+                            <outlet property="delegate" destination="0av-S0-7fC" id="tJs-cL-dhL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sensor Graphs" id="iqF-5L-fSn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfa-pV-S29" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="-4"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="1B8-8N-Qbl">
+            <objects>
+                <navigationController id="ft6-Vo-8K7" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <keyCommands>
+                        <keyCommand/>
+                    </keyCommands>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CTQ-nI-2wD">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysAnimate" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowPushOfSameClassTwice" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableTapToDismissGesture" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableSwipeToDismissGesture" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="350"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="0av-S0-7fC" kind="relationship" relationship="rootViewController" id="HUH-Nr-0aK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55e-z5-Hnr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="-6"/>
+        </scene>
         <!--Uart Module View Controller-->
         <scene sceneID="GSI-5z-wDd">
             <objects>
@@ -387,6 +444,11 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="psN-xM-Fhx">
                         <barButtonItem key="backBarButtonItem" title="Disconnect" id="bh9-F4-hZD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Graphs" id="6Gb-Kh-QCr" userLabel="Graphs Button">
+                            <connections>
+                                <segue destination="ft6-Vo-8K7" kind="presentation" id="9DF-V4-LwE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="armLabel" destination="Tx9-p8-9ky" id="gWV-vY-Syg"/>

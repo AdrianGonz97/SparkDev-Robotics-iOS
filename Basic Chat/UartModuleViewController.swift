@@ -7,12 +7,10 @@
 //
 
 
-
-
-
 import UIKit
 import WebKit
 import CoreBluetooth
+import SideMenu
 
 class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, UITextViewDelegate, UITextFieldDelegate, WKUIDelegate {
     
@@ -75,7 +73,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         NotificationCenter.default.removeObserver(self)
         
     }
-    
 
     /*func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
@@ -112,6 +109,8 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     }
     
     */
+    
+    
     // Motor Controller Functions
     @IBAction func sendForwardDown(_ sender: Any) {
         print("Motor Forward")
