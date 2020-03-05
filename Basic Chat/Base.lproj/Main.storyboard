@@ -106,6 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CDt-xe-H3Z">
                                 <rect key="frame" x="0.0" y="28" width="736" height="43.666667938232422"/>
@@ -131,9 +132,6 @@
         <scene sceneID="1B8-8N-Qbl">
             <objects>
                 <navigationController id="ft6-Vo-8K7" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <keyCommands>
-                        <keyCommand/>
-                    </keyCommands>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CTQ-nI-2wD">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
