@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3A59557B24107D16002AF177 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 3A59557A24107D16002AF177 /* SideMenu */; };
-		BED2F8702416B4F600073718 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED2F86C2416B48500073718 /* Charts.framework */; };
-		BED2F8712416B4F600073718 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BED2F86C2416B48500073718 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE35D55E2416B95F00F7DAB4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = BE35D55D2416B95F00F7DAB4 /* Charts */; };
+		BE35D5602416B97F00F7DAB4 /* SensorGraphUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35D55F2416B97F00F7DAB4 /* SensorGraphUIView.swift */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
 		D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */; };
@@ -37,21 +37,8 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		BED2F8722416B4F600073718 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				BED2F8712416B4F600073718 /* Charts.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		BE35D55F2416B97F00F7DAB4 /* SensorGraphUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorGraphUIView.swift; sourceTree = "<group>"; };
 		BED2F8662416B48400073718 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../Downloads/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A59557B24107D16002AF177 /* SideMenu in Frameworks */,
-				BED2F8702416B4F600073718 /* Charts.framework in Frameworks */,
+				BE35D55E2416B95F00F7DAB4 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +111,7 @@
 				D5B24DE21DEE393B00D33B5A /* Assets.xcassets */,
 				D5B24DE41DEE393B00D33B5A /* LaunchScreen.storyboard */,
 				D5B24DE71DEE393B00D33B5A /* Info.plist */,
+				BE35D55F2416B97F00F7DAB4 /* SensorGraphUIView.swift */,
 			);
 			path = "Basic Chat";
 			sourceTree = "<group>";
@@ -138,7 +126,6 @@
 				D5B24DD41DEE393B00D33B5A /* Sources */,
 				D5B24DD51DEE393B00D33B5A /* Frameworks */,
 				D5B24DD61DEE393B00D33B5A /* Resources */,
-				BED2F8722416B4F600073718 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +135,7 @@
 			name = "Basic Chat";
 			packageProductDependencies = (
 				3A59557A24107D16002AF177 /* SideMenu */,
+				BE35D55D2416B95F00F7DAB4 /* Charts */,
 			);
 			productName = "Basic Chat";
 			productReference = D5B24DD81DEE393B00D33B5A /* Vladimir.app */;
@@ -181,6 +169,7 @@
 			mainGroup = D5B24DCF1DEE393B00D33B5A;
 			packageReferences = (
 				3A59557924107D16002AF177 /* XCRemoteSwiftPackageReference "SideMenu" */,
+				BE35D55C2416B95F00F7DAB4 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = D5B24DD91DEE393B00D33B5A /* Products */;
 			projectDirPath = "";
@@ -235,6 +224,7 @@
 				D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */,
 				D5B24DEE1DEE399800D33B5A /* BLECentralViewController.swift in Sources */,
 				D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */,
+				BE35D5602416B97F00F7DAB4 /* SensorGraphUIView.swift in Sources */,
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
 			);
@@ -455,6 +445,14 @@
 				minimumVersion = 6.4.6;
 			};
 		};
+		BE35D55C2416B95F00F7DAB4 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -462,6 +460,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A59557924107D16002AF177 /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
+		};
+		BE35D55D2416B95F00F7DAB4 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE35D55C2416B95F00F7DAB4 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 		BED2F8622416B2C300073718 /* SideMenu */ = {
 			isa = XCSwiftPackageProductDependency;
