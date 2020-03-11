@@ -9,10 +9,10 @@
 import SwiftUI
 import Charts
 
-class SensorGraphViewController : UIViewController, ChartViewDelegate {
+class SensorGraphUIView : UIView {
 
-    override func viewDidLoad() {
-        <#code#>
-    }
+    var lineGraph: LineChartView!
+    
+    
     
 }

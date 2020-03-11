@@ -11,21 +11,23 @@ import UIKit
 import WebKit
 import CoreBluetooth
 import SideMenu
+import Charts
 
 class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, UITextViewDelegate, UITextFieldDelegate, WKUIDelegate {
     
-    // UI
-    // @IBOutlet weak var baseTextView: UITextView!
-    @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var switchUI: UISwitch!
+//     UI
     @IBOutlet weak var webVideoView: WKWebView!
-    @IBOutlet weak var humidityLabel: UILabel!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var carbonLabel: UILabel!
     @IBOutlet weak var motorLabel: UILabel!
     @IBOutlet weak var armLabel: UILabel!
+    
+    
+    var temperatureList: [ChartDataEntry] = []
+    var coList: [ChartDataEntry] = []
+    var humidityList: [ChartDataEntry] = []
+    var methaneList: [ChartDataEntry] = []
+    var ethanolList: [ChartDataEntry] = []
+    var deathList: [ChartDataEntry] = []
+    var startTime: Date = Date()
     
     
     //Data
@@ -92,7 +94,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         }
     }*/
     
-    /* UNCOMMENT WHEN READY
     func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
@@ -101,14 +102,22 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
             
             let valueList = currentString.components(separatedBy: ",")
             
-            self.humidityLabel.text = valueList[0] + "%"
-            self.temperatureLabel.text = valueList[1] + "°C"
-            self.carbonLabel.text = valueList[2] + "%"
+            var difference = self.startTime.timeIntervalSinceNow
+            
+            difference *= -1
+            
+            self.humidityList.append(ChartDataEntry(x: difference, y: Double(valueList[0])!))
+            self.temperatureList.append(ChartDataEntry(x: difference, y: Double(valueList[1])!))
+            self.coList.append(ChartDataEntry(x: difference, y: Double(valueList[2])!))
+            self.methaneList.append(ChartDataEntry(x: difference, y: Double(valueList[3])!))
+            self.ethanolList.append(ChartDataEntry(x: difference, y: Double(valueList[4])!))
+            self.deathList.append(ChartDataEntry(x: difference, y: Double(valueList[5])!))
+
             
         }
     }
     
-    */
+    
     
     
     // Motor Controller Functions
@@ -339,18 +348,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     
     //This on/off switch sends a value of 1 and 0 to the Arduino
     //This can be used as a switch or any thing you'd like
-    @IBAction func switchAction(_ sender: Any) {
-        if switchUI.isOn {
-            print("On ")
-            writeCharacteristic(val: 1)
-        }
-        else
-        {
-            print("Off")
-            writeCharacteristic(val: 0)
-            print(writeCharacteristic)
-        }
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

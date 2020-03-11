@@ -10,6 +10,8 @@
 		3A59557B24107D16002AF177 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 3A59557A24107D16002AF177 /* SideMenu */; };
 		BE35D55E2416B95F00F7DAB4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = BE35D55D2416B95F00F7DAB4 /* Charts */; };
 		BE35D5602416B97F00F7DAB4 /* SensorGraphUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35D55F2416B97F00F7DAB4 /* SensorGraphUIView.swift */; };
+		BE5806E724194CE300BD4C32 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5806E624194CE300BD4C32 /* SideMenuViewController.swift */; };
+		BE5806EB2419533500BD4C32 /* BaseGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5806EA2419533500BD4C32 /* BaseGraphViewController.swift */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
 		D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */; };
@@ -20,26 +22,10 @@
 		D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DEF1DEF153A00D33B5A /* PeripheralTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BED2F86B2416B48500073718 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BED2F8662416B48400073718 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
-			remoteInfo = Charts;
-		};
-		BED2F86D2416B48500073718 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BED2F8662416B48400073718 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
-			remoteInfo = ChartsTests;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		BE35D55F2416B97F00F7DAB4 /* SensorGraphUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorGraphUIView.swift; sourceTree = "<group>"; };
-		BED2F8662416B48400073718 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../Downloads/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		BE5806E624194CE300BD4C32 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		BE5806EA2419533500BD4C32 /* BaseGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGraphViewController.swift; sourceTree = "<group>"; };
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
 		D5B24DD81DEE393B00D33B5A /* Vladimir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vladimir.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,15 +51,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BED2F8672416B48400073718 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BED2F86C2416B48500073718 /* Charts.framework */,
-				BED2F86E2416B48500073718 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BED2F86F2416B4F600073718 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +63,6 @@
 			children = (
 				D5B24DDA1DEE393B00D33B5A /* Basic Chat */,
 				D5B24DD91DEE393B00D33B5A /* Products */,
-				BED2F8662416B48400073718 /* Charts.xcodeproj */,
 				BED2F86F2416B4F600073718 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +88,8 @@
 				D5B24DE41DEE393B00D33B5A /* LaunchScreen.storyboard */,
 				D5B24DE71DEE393B00D33B5A /* Info.plist */,
 				BE35D55F2416B97F00F7DAB4 /* SensorGraphUIView.swift */,
+				BE5806EA2419533500BD4C32 /* BaseGraphViewController.swift */,
+				BE5806E624194CE300BD4C32 /* SideMenuViewController.swift */,
 			);
 			path = "Basic Chat";
 			sourceTree = "<group>";
@@ -173,35 +151,12 @@
 			);
 			productRefGroup = D5B24DD91DEE393B00D33B5A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = BED2F8672416B48400073718 /* Products */;
-					ProjectRef = BED2F8662416B48400073718 /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D5B24DD71DEE393B00D33B5A /* Basic Chat */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		BED2F86C2416B48500073718 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = BED2F86B2416B48500073718 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BED2F86E2416B48500073718 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = BED2F86D2416B48500073718 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D5B24DD61DEE393B00D33B5A /* Resources */ = {
@@ -225,6 +180,8 @@
 				D5B24DEE1DEE399800D33B5A /* BLECentralViewController.swift in Sources */,
 				D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */,
 				BE35D5602416B97F00F7DAB4 /* SensorGraphUIView.swift in Sources */,
+				BE5806EB2419533500BD4C32 /* BaseGraphViewController.swift in Sources */,
+				BE5806E724194CE300BD4C32 /* SideMenuViewController.swift in Sources */,
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
 			);
